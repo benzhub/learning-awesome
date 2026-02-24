@@ -1,47 +1,53 @@
-# WordPress Elementor Widget 教學 — 總覽
+# Elementor 自訂 Widget — 一句話介紹
 
-## 一句話說明
-
-> **Elementor Widget** 是你在 Elementor 編輯器裡拖放的每一個積木，你可以自己寫 PHP 程式碼來打造專屬的積木。
+> **Elementor** 是 WordPress 的拖放式頁面編輯器；**自訂 Widget** 讓你可以用 PHP 打造專屬的積木，在編輯器裡拖放使用。
 
 ---
 
-## 你會學到什麼？
+## 這是什麼
 
-這套教學從「Elementor 是什麼」開始，一步步帶你寫出一個能在編輯器拖放的自訂 Widget。
+- **解決什麼問題**：內建 Widget 不夠用時，用 PHP 擴充可拖放的區塊
+- **和 Gutenberg Block 的差異**：Elementor Widget 用 **PHP 後端渲染**，不需 React；學習門檻較低
+
+---
+
+## 適用場景
+
+| 適合 | 不適合 |
+|------|--------|
+| 整合特殊功能（計算機、表單、API 資料） | 需要複雜前端互動（用 JS 框架較佳） |
+| 把重複 HTML 包成可重用積木 | 純靜態頁面（內建 Widget 已夠用） |
+| 客戶需在編輯器直接設定客製區塊 | 完全不懂 PHP |
+
+---
+
+## 學習地圖
 
 | 文件 | 主題 | 約需時間 |
 |------|------|----------|
-| `01-what-is-elementor.md` | Elementor 是什麼、能做什麼 | 5 分鐘 |
-| `02-what-is-widget.md` | Widget 是什麼、和 Block 有何不同 | 5 分鐘 |
-| `03-widget-structure.md` | 一個 Widget 的結構長什麼樣 | 10 分鐘 |
-| `04-create-first-widget.md` | 動手建立第一個 Widget | 15 分鐘 |
-| `05-controls.md` | 讓使用者可以設定的控制項（文字、顏色、圖片…） | 15 分鐘 |
-| `06-render.md` | 把設定值渲染成實際的 HTML | 10 分鐘 |
+| [01-quick-start](01-quick-start.md) | 10 分鐘建立第一個 Widget | 10 分鐘 |
+| [02-core-concepts](02-core-concepts.md) | Widget 結構、Controls、Render | 15 分鐘 |
+| [03-common-patterns](03-common-patterns.md) | 常用 Control 類型與實戰模式 | 20 分鐘 |
+| [04-advanced](04-advanced.md) | 編輯器預覽、動態內容、Hooks | 15 分鐘 |
+| [05-best-practices](05-best-practices.md) | 安全性、命名、避坑指南 | 10 分鐘 |
 
 ---
 
 ## 前置需求
 
-- 已安裝 **WordPress**（本機或測試主機都可以）
-- 已安裝 **Elementor** 外掛（免費版即可）
-- 知道怎麼建立 **WordPress 外掛**（新增一個資料夾 + PHP 檔案就好）
-- 會基本的 **PHP** 語法
-
-> 不熟悉 WordPress 外掛？只要知道「在 `wp-content/plugins/` 建一個資料夾，裡面放 PHP 檔案」就夠了。
+- WordPress（本機或遠端皆可）
+- Elementor 外掛（**免費版即可**，自訂 Widget 不需 Pro）
+- 基本 PHP 語法
+- 會建立 WordPress 外掛（`wp-content/plugins/` 下建資料夾 + PHP 檔）
 
 ---
 
-## 開始前的心理建設
+## 核心公式
 
-學 Elementor Widget 的難點**不是邏輯複雜**，而是「需要記的 API 名稱比較多」。
+> 一個 Widget = **登記自己** + **定義 Controls** + **輸出 HTML**
 
-你只要記住一件事：
-
-> 一個 Widget = **登記自己** + **定義設定項目** + **輸出 HTML**
-
-其他都是細節，查文件就好。
+記住這三件事，其他都是細節。
 
 ---
 
-> 從 `01-what-is-elementor.md` 開始！
+> 從 [01-quick-start.md](01-quick-start.md) 開始！
